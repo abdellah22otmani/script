@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230928 21:31:33.829" rpa="false" schemaversion="4">
+<suite id="s1" name="Test04" source="c:\Users\Admin\Desktop\session3\automatisation\Script2\Testcases\test04.robot">
+<test id="s1-t1" name="tc01 login test" line="8">
+<kw name="Se connecter a l'application orange demo">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Myurl}</arg>
+<arg>${Mybrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230928 21:31:33.991" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg timestamp="20230928 21:31:34.657" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\Admin\AppData\Local\Programs\Python\Python311\Scripts\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.31); currently, msedgedriver 117.0.2045.43 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230928 21:31:33.991" endtime="20230928 21:31:37.463"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230928 21:31:37.463" endtime="20230928 21:31:37.586"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230928 21:31:39.586" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230928 21:31:37.586" endtime="20230928 21:31:39.586"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:33.990" endtime="20230928 21:31:39.586"/>
+</kw>
+<kw name=" Saisir le nom d'utilisateur">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230928 21:31:39.587" endtime="20230928 21:31:39.646"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 21:31:39.647" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230928 21:31:39.647" endtime="20230928 21:31:39.718"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230928 21:31:41.720" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230928 21:31:39.719" endtime="20230928 21:31:41.720"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:39.586" endtime="20230928 21:31:41.720"/>
+</kw>
+<kw name="Saisir le mot de passe">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230928 21:31:41.721" endtime="20230928 21:31:41.762"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 21:31:41.762" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20230928 21:31:41.800" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230928 21:31:41.872" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230928 21:31:41.762" endtime="20230928 21:31:41.872"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230928 21:31:44.874" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230928 21:31:41.872" endtime="20230928 21:31:44.874"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:41.721" endtime="20230928 21:31:44.874"/>
+</kw>
+<kw name="Cliquer sur le bouton login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Xpath://Button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230928 21:31:44.876" level="INFO">Clicking button 'Xpath://Button'.</msg>
+<status status="PASS" starttime="20230928 21:31:44.876" endtime="20230928 21:31:45.825"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230928 21:31:48.826" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230928 21:31:45.825" endtime="20230928 21:31:48.826"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:44.875" endtime="20230928 21:31:48.826"/>
+</kw>
+<kw name="valider l'affichage de la page d'acceuil">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>Xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230928 21:31:48.828" level="INFO">Verifying element 'Xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20230928 21:31:48.827" endtime="20230928 21:31:48.854"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:48.827" endtime="20230928 21:31:48.854"/>
+</kw>
+<kw name="fermer l'application">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230928 21:31:48.854" endtime="20230928 21:31:51.031"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:48.854" endtime="20230928 21:31:51.032"/>
+</kw>
+<status status="PASS" starttime="20230928 21:31:33.988" endtime="20230928 21:31:51.032"/>
+</test>
+<status status="PASS" starttime="20230928 21:31:33.833" endtime="20230928 21:31:51.034"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test04">Test04</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230928 21:31:34.657" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\Admin\AppData\Local\Programs\Python\Python311\Scripts\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.31); currently, msedgedriver 117.0.2045.43 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
